@@ -1,5 +1,7 @@
 name: unluac Nightly Build
-on: push
+on: 
+  push:
+  workflow_dispatch:
 
 jobs:
   jarbuild:
