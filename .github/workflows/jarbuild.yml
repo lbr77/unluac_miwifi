@@ -25,7 +25,7 @@ jobs:
         javac -d build -sourcepath src  src/unluac/*.java
         jar -cfm build/unluac.jar src/META-INF/MANIFEST.MF -C build  .
     - name: Upload
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v6
       with:
         name: unluac-${{ steps.vars.outputs.branch }}-${{ steps.vars.outputs.sha_short }}.jar
         path: build/unluac.jar
